@@ -1,0 +1,18 @@
+cube = lambda x: x*x*x # complete the lambda function 
+
+def fibonacci(n):
+    # return a list of fibonacci numbers
+    if n > 1:
+        a = [0,1]
+        for _ in range(n-2):
+            i = a[_ + 1] + a[_]
+            a.append(i)
+    elif n == 1:
+        a = [0]
+    elif n == 0:
+        a = []    
+    return a
+
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
