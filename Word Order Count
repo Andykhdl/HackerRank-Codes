@@ -1,0 +1,14 @@
+from collections import OrderedDict
+
+a = OrderedDict()
+
+for _ in range(int(input())):
+    n = str(input().strip())
+    
+    if n in a:
+        a[n] += 1
+    else:
+        a[n] = 1
+        
+print(len(a))        
+print(*a.values())

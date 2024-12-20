@@ -1,0 +1,14 @@
+from collections import Counter
+input()
+a = list(map(int, input().split()))
+b = Counter(a)
+t = 0
+
+for _ in range(int(input())):
+    i, p = map(int, input().split())
+    if i in a:
+        a.pop(int(i))
+        t += int(p)
+    else:
+        continue
+print(t)
