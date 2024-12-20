@@ -1,0 +1,17 @@
+from collections import deque
+
+d = deque()
+
+for _ in range(int(input())):
+    p = input().split()
+    i = p[0]
+    if str(i) == 'append':
+        d.append(int(p[1]))
+    elif str(i) == 'appendleft':
+        d.appendleft(int(p[1]))
+    elif str(i) == 'pop':
+        d.pop()
+    elif str(i) == 'popleft':
+        d.popleft()
+
+print(*d)
